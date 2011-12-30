@@ -1,7 +1,7 @@
 Gem::Specification.new do |s|
   s.platform    = Gem::Platform::RUBY
   s.name        = 'theme_for_spree'
-  s.version     = '0.1.0'
+  s.version     = '0.2.0'
   s.summary     = 'A Spree Commerce Theme'
 
   s.author        = 'Brian D. Quinn'
