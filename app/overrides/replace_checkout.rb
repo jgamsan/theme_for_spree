@@ -13,7 +13,7 @@ Deface::Override.new(:virtual_path => %q{checkout/edit},
         <li <%= @order.address?  && controller.action_name != "registration" ? "class='active'" : "" %>><span class="number">2</span><span class="title">Tu Direccion</span></li>
         <li <%= @order.delivery?  && controller.action_name != "registration" ? "class='active'" : "" %>><span class="number">3</span><span class="title">Opciones Envio</span></li>
         <li <%= @order.payment?  && controller.action_name != "registration" ? "class='active'" : "" %>><span class="number">4</span><span class="title">Opciones Pago</span></li>
-        <li <%= @order.confirm? && controller.action_name != "registration" ? "class='active'" : "" %>><span class="number">5</span><span class="title">Situacion Orden</span></li>
+        <li <%= @order.confirm? && controller.action_name != "registration" ? "class='active'" : "" %>><span class="number">5</span><span class="title">Situacion Pedido</span></li>
       </ul>
     </div>
     <%= form_for @order, :url => update_checkout_path(@order.state) do |form| %>
