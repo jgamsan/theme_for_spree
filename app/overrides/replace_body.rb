@@ -50,7 +50,6 @@ Deface::Override.new(:virtual_path => %q{layouts/spree_application},
 
     <footer data-hook="footer">
       <div class="inner">
-        <%= image_tag "store/kid.jpg", :width => "204", :height => "413", :alt => "RailsDog Radio Kid", :id => "kid" %>
 
         <div id="contacta nos">
           <h3>Contact Us</h3>
