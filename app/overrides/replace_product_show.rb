@@ -1,3 +1,4 @@
+# encoding: utf-8
 Deface::Override.new(:virtual_path => %q{products/show},
                           :name => %q{replace_product_show},
                           :replace => %q{[data-hook='product_show']},
