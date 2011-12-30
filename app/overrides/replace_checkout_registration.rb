@@ -8,17 +8,17 @@ Deface::Override.new(:virtual_path => %q{checkout/registration},
     <%= render "shared/error_messages", :target => @order %>
     <div id="tabs" role="tabs">
       <ul>
-        <li class='active'><span class="number">1</span><span class="title">Create an Account</span></li>
-        <li><span class="number">2</span><span class="title">Your Address</span></li>
-        <li><span class="number">3</span><span class="title">Shipping Options</span></li>
-        <li><span class="number">4</span><span class="title">Payment Options</span></li>
-        <li><span class="number">5</span><span class="title">Place Order</span></li>
+        <li class='active'><span class="number">1</span><span class="title">Crear una Cuenta</span></li>
+        <li><span class="number">2</span><span class="title">Tu Direccion</span></li>
+        <li><span class="number">3</span><span class="title">Opciones Envio</span></li>
+        <li><span class="number">4</span><span class="title">Opciones Pago</span></li>
+        <li><span class="number">5</span><span class="title">Situacion Orden</span></li>
       </ul>
     </div>
     <div id="content" role="content">
       <div id="existing-customer">
-        <h2>Existing Customers</h2>
-        <p>If you've already registered for an account on you can sign in here:</p>
+        <h2>Clientes Existentes</h2>
+        <p>Si tu ya te has registrado en una cuenta en la que puedes entrar aqui:</p>
         <%= render :partial => 'shared/login' %>
       </div>
 
@@ -30,3 +30,4 @@ Deface::Override.new(:virtual_path => %q{checkout/registration},
   <!-- END MAIN CONTENT -->
   <%= render 'summary' %>
 </div>})
+

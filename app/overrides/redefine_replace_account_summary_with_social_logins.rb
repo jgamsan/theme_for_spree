@@ -5,11 +5,11 @@ if Rails.application.railties.all.map(&:railtie_name).include? "spree_social"
                        :replace => "[data-hook='account_summary']",
                        :sequence => {:after => 'replace_account_my_orders'},
                        :text => %q{<% if @user.user_authentications.present? %>
-  <h3>My Logins</h3>
+  <h3>Mis Logins</h3>
   <table id="cart-detail">
     <thead>
       <tr>
-        <th>Provider</th>
+        <th>Proveedor</th>
         <th>Nickname</th>
         <th>Linked</th>
         <th>&nbsp;</th>
@@ -34,11 +34,12 @@ if Rails.application.railties.all.map(&:railtie_name).include? "spree_social"
 <% end %>
 
 
-<h3>Link Accounts</h3>
-<p>You can link your RailsDog Radio account with an account you already have on any of the following sites:</p>
+<h3>Link de Cuentas</h3>
+<p>Tu puedes unir tu cuenta de Galiclick a una cuenta que tu ya tengas en cualquiera de los siguientes sitios:</p>
 <% AuthenticationMethod.where(:environment => ::Rails.env).each do |user| %>
   <%= link_to(image_tag("store/social/#{user.preferred_provider}_32.png", :size => "32x32", :alt => "#{user.preferred_provider}"), user_authentication_omniauth_authorize_path(user.preferred_provider.to_sym), :title => "Sign in with #{user.preferred_provider}") if user.active %>
 <% end %>
   })
 
 end
+

@@ -3,7 +3,7 @@ Deface::Override.new(:virtual_path => %q{checkout/_payment},
                           :replace => %q{#payment[data-hook]},
                           :text => %q{<div id="content" role="content">
   <ul id="payment" class="fields">
-    <h2>Your prefered payment option</h2>
+    <h2>Tus opciones de pago preferidas</h2>
     <% @order.available_payment_methods.each do |method| %>
       <li class="options">
         <%= radio_button_tag "order[payments_attributes][][payment_method_id]", method.id, method == @order.payment_method %>
@@ -17,5 +17,6 @@ Deface::Override.new(:virtual_path => %q{checkout/_payment},
     <% end %>
   </ul>
   <br>
-  <div class="submit"><button type="submit" class="blue">Continue</button></div>
+  <div class="submit"><button type="submit" class="blue">Continuar</button></div>
 </div>})
+

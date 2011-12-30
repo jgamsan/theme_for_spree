@@ -3,7 +3,7 @@ Deface::Override.new(:virtual_path => %q{checkout/_confirm},
                           :replace => %q{#order_details[data-hook]},
                           :text => %q{<div id="content" role="content">
   <div id="order-items" style="padding:0 30px 30px 0">
-    <h2>Items In Your Order</h2>
+    <h2>Articulos en tu Pedido</h2>
     <ul>
     <% @order.line_items.each do |line_item| %>
       <li>
@@ -12,11 +12,11 @@ Deface::Override.new(:virtual_path => %q{checkout/_confirm},
       </li>
     <% end %>
     </ul>
-    <%= link_to "edit", cart_path %>
+    <%= link_to "editar", cart_path %>
   </div>
 
   <div id="order-email" style="padding:30px 30px 30px 0">
-    <h2>Order Contact Details</h2>
+    <h2>Detalles Contacto del Pedido</h2>
     <h4>Email</h4>
     <%= @order.email %>
   </div>
@@ -24,7 +24,7 @@ Deface::Override.new(:virtual_path => %q{checkout/_confirm},
   <% ["ship", "bill"].each do |addr_type| %>
     <% address = @order.send("#{addr_type}_address") %>
     <div id="order-#{addr_type}_address" style="float:left; padding:30px 30px 30px 0">
-      <h4><%= addr_type.capitalize %> Address</h4>
+      <h4><%= addr_type.capitalize %> Direccion</h4>
       <p>
         <%= address.full_name %><br />
         <%= address.address1 %><br />
@@ -39,32 +39,33 @@ Deface::Override.new(:virtual_path => %q{checkout/_confirm},
         <% end %>
         <%= address.country.try(:name) %> <%= address.zipcode %>
       </p>
-      <%= link_to "edit", checkout_state_path('payment') %>
+      <%= link_to "editar", checkout_state_path('payment') %>
     </div>
   <% end %>
 
     <div id="order-payment" style="padding:30px 30px 30px 0; clear:both">
-      <h2>Payment Details</h2>
+      <h2>Detalles del pago</h2>
       <h4><%= @order.payment.payment_method.name %></h4>
 
       <% if @order.payment.payment_method.class.to_s == "BillingIntegration::PaypalExpress" %>
-        <p>You will be redirected to PayPal to complete your order.</p>
+        <p>Seras redireccionado a PayPal para completar el pedido.</p>
       <% else %>
         <%= @order.payment.source.name %><br />
         <%= @order.payment.source.display_number %>
       <% end %>
 
-      <%= link_to "edit", checkout_state_path('payment') %>
+      <%= link_to "editar", checkout_state_path('payment') %>
     </div>
   <div>
 
   </div>
   <div class="submit">
     <% if @order.payment.payment_method.class.to_s == "BillingIntegration::PaypalExpress" %>
-      <button class="blue" type="submit">Go To PayPal</button>
+      <button class="blue" type="submit">Ir a PayPal</button>
     <% else %>
-      <button class="blue" type="submit">Place your order</button>
+      <button class="blue" type="submit">Situacion del pedido</button>
     <% end %>
   </div>
   </div>
 </div>})
+

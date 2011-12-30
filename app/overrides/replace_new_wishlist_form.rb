@@ -5,5 +5,6 @@ Deface::Override.new(:virtual_path => 'wishlists/new',
                      :text => %q{<p><%= f.label :name, t(:name), :class => "inline" %>:&nbsp;<%= f.text_field :name %></p>
   <p><%= f.check_box :is_private %>&nbsp;<%= f.label :is_private, "Keep this list private, for my eyes only!", :class => "inline" %></p>
   <div class="submit">
-    <button type="submit" class="blue">Create Wish List</button>
+    <button type="submit" class="blue">Crear Lista de Deseos</button>
   </div>})
+

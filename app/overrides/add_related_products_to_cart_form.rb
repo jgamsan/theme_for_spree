@@ -10,7 +10,7 @@ if Rails.application.railties.all.map(&:railtie_name).include? "spree_related_pr
     <p>
       <%= check_box_tag "variants[#{cross_sell.master.id}]", 1 %>
       <label for="">
-        Add <em>'<%= link_to cross_sell.name, product_url(cross_sell) %>'</em> for <%= product_price(cross_sell) %>
+        Aňadir <em>'<%= link_to cross_sell.name, product_url(cross_sell) %>'</em> para <%= product_price(cross_sell) %>
       </label>
     </p>
     <% end %>
@@ -18,3 +18,4 @@ if Rails.application.railties.all.map(&:railtie_name).include? "spree_related_pr
 <% end %>})
 
 end
+
