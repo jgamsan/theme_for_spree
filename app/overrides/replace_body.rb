@@ -51,8 +51,8 @@ Deface::Override.new(:virtual_path => %q{layouts/spree_application},
     <footer data-hook="footer">
       <div class="inner">
 
-        <div id="contacta nos">
-          <h3>Contact Us</h3>
+        <div id="contact-us">
+          <h3>Contacta Nos</h3>
           <p>
           (301)560-2000<br>
           <a href="mailto:info@galiclick.com">info@galiclick.com</a>
