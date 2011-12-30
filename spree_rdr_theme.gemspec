@@ -1,6 +1,6 @@
 Gem::Specification.new do |s|
   s.platform    = Gem::Platform::RUBY
-  s.name        = 'spree_rdr_theme'
+  s.name        = 'theme_for_spree'
   s.version     = '0.1.0'
   s.summary     = 'A Spree Commerce Theme'
 
@@ -14,3 +14,4 @@ Gem::Specification.new do |s|
 
   s.has_rdoc = false
 end
+
