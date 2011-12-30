@@ -50,7 +50,7 @@ Deface::Override.new(:virtual_path => %q{products/show},
             <hr />
           <% end %>
 
-          <p><button type="submit">A&ntilde;adir al pedido</button></p>
+          <p><button type="submit">Sumar al pedido</button></p>
         <% end %>
       </div>
     </div>

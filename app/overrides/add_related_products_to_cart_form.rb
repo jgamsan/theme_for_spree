@@ -10,7 +10,7 @@ if Rails.application.railties.all.map(&:railtie_name).include? "spree_related_pr
     <p>
       <%= check_box_tag "variants[#{cross_sell.master.id}]", 1 %>
       <label for="">
-        A&ntilde;adir <em>'<%= link_to cross_sell.name, product_url(cross_sell) %>'</em> para <%= product_price(cross_sell) %>
+        Sumar <em>'<%= link_to cross_sell.name, product_url(cross_sell) %>'</em> para <%= product_price(cross_sell) %>
       </label>
     </p>
     <% end %>
