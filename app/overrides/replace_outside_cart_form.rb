@@ -11,8 +11,7 @@ Deface::Override.new(:virtual_path => %q{orders/edit},
     </div>
 
     <p class="actions">
-      <%=link_to t("continue_shopping"), products_path, :class => 'continue' %> &nbsp;
-      o &nbsp;
+      <%=link_to t("continue_shopping"), products_path, :class => 'continue' %> &nbsp; o &nbsp;
       <%= link_to t("checkout"), checkout_path, :class => 'button checkout' %>
     </p>
 

@@ -6,32 +6,32 @@ Deface::Override.new(:virtual_path => %q{checkout/_address},
 <% end %>
 
 <div id="content" role="content">
-  <h2>Your Billing Information</h2>
+  <h2>Informacion de tu Factura</h2>
   <%= form.fields_for :bill_address do |bill_form| %>
     <div id="billing">
     <ul class="inner fields">
       <li class="half">
-        <%= bill_form.label :firstname, "First Name" %>
+        <%= bill_form.label :firstname, "Nombre" %>
         <%= bill_form.text_field :firstname %>
       </li>
       <li class="half last">
-        <%= bill_form.label :lastname, "Last Name" %>
+        <%= bill_form.label :lastname, "Apellidos" %>
         <%= bill_form.text_field :lastname %>
       </li>
       <li>
-        <%= bill_form.label :address1, "Shipping address" %>
+        <%= bill_form.label :address1, "Direccion Envio" %>
         <%= bill_form.text_field :address1 %>
       </li>
       <li>
-        <%= bill_form.label :address2, "Shipping address 2" %>
+        <%= bill_form.label :address2, "Direccion Envio 2" %>
         <%= bill_form.text_field :address2 %>
       </li>
       <li>
-        <%= bill_form.label :city, "City" %>
+        <%= bill_form.label :city, "Ciudad" %>
         <%= bill_form.text_field :city %>
       </li>
       <li class="half">
-        <%= bill_form.label :state, "State" %>
+        <%= bill_form.label :state, "Provincia" %>
         <span id="bstate">
           <% have_states = !@order.bill_address.country.states.empty? %>
           <noscript>
@@ -56,17 +56,17 @@ Deface::Override.new(:virtual_path => %q{checkout/_address},
         </span>
       </li>
       <li class="half last">
-        <%= bill_form.label :zipcode, "Postal code" %>
+        <%= bill_form.label :zipcode, "Codigo Postal" %>
         <%= bill_form.text_field :zipcode %>
       </li>
       <li>
-        <%= bill_form.label :country_id, "Country" %>
+        <%= bill_form.label :country_id, "Pais" %>
         <span id="bcountry">
           <%= bill_form.collection_select :country_id, available_countries.uniq.sort, :id, :name %>
         </span>
       </li>
       <li>
-        <%= bill_form.label :phone, "Phone" %>
+        <%= bill_form.label :phone, "Telefono" %>
         <%= bill_form.text_field :phone %>
       </li>
     </ul>
@@ -74,7 +74,7 @@ Deface::Override.new(:virtual_path => %q{checkout/_address},
   <% end %>
   <hr/>
 
-  <h2>Your Shipping Information</h2>
+  <h2>Informacion de tu Envio</h2>
   <%= form.fields_for :ship_address do |ship_form| %>
     <div id="shipping">
       <ul class="fields">
@@ -85,27 +85,27 @@ Deface::Override.new(:virtual_path => %q{checkout/_address},
       </ul>
       <ul class="inner fields">
         <li class="half">
-          <%= ship_form.label :firstname, "First Name" %>
+          <%= ship_form.label :firstname, "Nombre" %>
           <%= ship_form.text_field :firstname %>
         </li>
         <li class="half last">
-          <%= ship_form.label :lastname, "Last Name" %>
+          <%= ship_form.label :lastname, "Apellidos" %>
           <%= ship_form.text_field :lastname %>
         </li>
         <li>
-          <%= ship_form.label :address1, "Shipping address" %>
+          <%= ship_form.label :address1, "Direccion Envio" %>
           <%= ship_form.text_field :address1 %>
         </li>
         <li>
-          <%= ship_form.label :address2, "Shipping address 2" %>
+          <%= ship_form.label :address2, "Direccion Envio 2" %>
           <%= ship_form.text_field :address2 %>
         </li>
         <li>
-          <%= ship_form.label :city, "City" %>
+          <%= ship_form.label :city, "Ciudad" %>
           <%= ship_form.text_field :city %>
         </li>
         <li class="half">
-          <%= ship_form.label :state, "State" %>
+          <%= ship_form.label :state, "Provincia" %>
           <span id="sstate">
             <% have_states = !@order.ship_address.country.states.empty? %>
             <noscript>
@@ -130,22 +130,23 @@ Deface::Override.new(:virtual_path => %q{checkout/_address},
           </span>
         </li>
         <li class="half last">
-          <%= ship_form.label :zipcode, "Postal code" %>
+          <%= ship_form.label :zipcode, "Codigo Postal" %>
           <%= ship_form.text_field :zipcode %>
         </li>
         <li>
-          <%= ship_form.label :country_id, "Country" %>
+          <%= ship_form.label :country_id, "Pais" %>
           <span id="scountry">
             <%= ship_form.collection_select :country_id, Country.all, :id, :name %>
           </span>
         </li>
         <li>
-          <%= ship_form.label :phone, "Phone" %>
+          <%= ship_form.label :phone, "Telefono" %>
           <%= ship_form.text_field :phone %>
         </li>
       </ul>
     </div>
 
   <% end %>
-  <div class="submit"><button type="submit" class="blue">Continue</button></div>
+  <div class="submit"><button type="submit" class="blue">Continuar</button></div>
 </div>})
+

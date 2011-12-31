@@ -24,7 +24,7 @@ INSTALLATION
 
 Add the following line to your Gemfile:
 
-    gem 'spree_rdr_theme', :git => 'git://github.com/spree/spree_rdr_theme.git'
+    gem 'theme_for_spree', :git => 'git://github.com/spree/theme_for_spree.git'
 
 NOTE: It's important that you add this line at the bottom of the Gemfile, or at least AFTER any other extension/engine/gem that you'd like to theme (i.e. Spree)
 
@@ -34,7 +34,7 @@ Run bunlder:
 
 Install assets:
 
-    $ rails g spree_rdr_theme:install
+    $ rails g theme_for_spree:install
 
 Optional: Clear out precompiled assets (required for install in sandbox):
 

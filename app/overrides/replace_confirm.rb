@@ -44,7 +44,7 @@ Deface::Override.new(:virtual_path => %q{checkout/_confirm},
   <% end %>
 
     <div id="order-payment" style="padding:30px 30px 30px 0; clear:both">
-      <h2>Detalles del pago</h2>
+      <h2>Detalles del Pago</h2>
       <h4><%= @order.payment.payment_method.name %></h4>
 
       <% if @order.payment.payment_method.class.to_s == "BillingIntegration::PaypalExpress" %>
@@ -63,7 +63,7 @@ Deface::Override.new(:virtual_path => %q{checkout/_confirm},
     <% if @order.payment.payment_method.class.to_s == "BillingIntegration::PaypalExpress" %>
       <button class="blue" type="submit">Ir a PayPal</button>
     <% else %>
-      <button class="blue" type="submit">Situacion del pedido</button>
+      <button class="blue" type="submit">Situacion del Pedido</button>
     <% end %>
   </div>
   </div>

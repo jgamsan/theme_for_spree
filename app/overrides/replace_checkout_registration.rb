@@ -12,13 +12,13 @@ Deface::Override.new(:virtual_path => %q{checkout/registration},
         <li><span class="number">2</span><span class="title">Tu Direccion</span></li>
         <li><span class="number">3</span><span class="title">Opciones Envio</span></li>
         <li><span class="number">4</span><span class="title">Opciones Pago</span></li>
-        <li><span class="number">5</span><span class="title">Situacion Orden</span></li>
+        <li><span class="number">5</span><span class="title">Situacion Pedido</span></li>
       </ul>
     </div>
     <div id="content" role="content">
       <div id="existing-customer">
         <h2>Clientes Existentes</h2>
-        <p>Si tu ya te has registrado en una cuenta en la que puedes entrar aqui:</p>
+        <p>Si tu ya te has registrado en una cuenta, puedes entrar aqui:</p>
         <%= render :partial => 'shared/login' %>
       </div>
 
