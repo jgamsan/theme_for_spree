@@ -1,4 +1,3 @@
-# encoding: utf-8
 Deface::Override.new(:virtual_path => %q{products/show},
                           :name => %q{replace_product_show},
                           :replace => %q{[data-hook='product_show']},
@@ -51,7 +50,7 @@ Deface::Override.new(:virtual_path => %q{products/show},
             <hr />
           <% end %>
 
-          <p><button type="submit">Sumar al pedido</button></p>
+          <p><button type="submit">Sumar al Pedido</button></p>
         <% end %>
       </div>
     </div>
